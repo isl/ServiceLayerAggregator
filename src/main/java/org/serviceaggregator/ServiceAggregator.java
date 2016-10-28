@@ -49,7 +49,8 @@ public class ServiceAggregator {
 
 
        KairosDbClient kairosDbClient = new KairosDbClient("http://localhost:8088/");
-       KairosDbClient centralKairosDbClient = new KairosDbClient("http://147.52.82.63:8088/");
+//       KairosDbClient centralKairosDbClient = new KairosDbClient("http://147.52.82.63:8088/");
+       KairosDbClient centralKairosDbClient = new KairosDbClient("http://" +args[0]+ ":8088/");
 
        // initialize with the already pushed metrics
        kairosDbClient = kairosDbClient.initializeFullBuilder(kairosDbClient);
